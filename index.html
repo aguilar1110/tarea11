@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let ejercicio = prompt("Ingrese el ejercicio a revisar");
+
+        if (ejercicio==1){
+            let nota = prompt ("Ingrese su calificación de 0 a 100");
+
+            if (nota >0 && nota <70) {
+                document.write("Reprobado");
+            }
+            else if (nota >=70  && nota <90){
+                document.write("Aprobado");
+            }
+            else if (nota >=90 && nota <=100){
+                document.write("Aprobado con honores");
+            }
+
+            else {
+                document.write("Ingresó una calificación inválida")
+            }
+        }
+
+        else if (ejercicio==2){
+            let numero = prompt ("Ingresa un número");
+            
+            if (numero % 2 == 0){ 
+                document.write(" El número ", numero, " es par");
+            }
+            else{ 
+                document.write("El número ", numero, " es impar ");
+            } 
+
+        }
+
+        else if(ejercicio==3){
+            let compra = prompt ("Ingrese el valor de su compra");
+            let descuento = 0.10; 
+            let valdes = 0 ;
+            let valor ;
+
+            if (compra >= 100) {
+                document.write("Tiene un decuento de: ");
+                valdes= compra*descuento ;
+                document.write (valdes, "<br>");
+                valor = compra - valdes;
+                document.write ("El valor final de su compra es de:" ,valor);
+            }
+            else if (compra >0 && compra <99){
+                document.write("No tiene descuento");
+            }
+            else {
+                document.write("Valor invalido")
+            }
+        }
+
+        else if (ejercicio ==4){
+            let b= Math.random();
+            let a= Math.round(b*10);
+
+            let adivina= prompt(" Adivina un número entre el 0 y el 10");
+            if (adivina==a) {
+                document.write(" Adivinaste el número, felicidades 🎉")
+            }
+            else{
+                document.write(" Vuelve a intentarlo ☹", "<br>");
+            }
+            document.write(a);
+        }
+
+        else {
+            document.write(" El ejecicio seleccionado no se encunetra");
+        }
+    </script>
+    
+</body>
+</html>
